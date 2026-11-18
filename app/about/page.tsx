@@ -1,0 +1,12 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { Award, Heart, Sparkles } from 'lucide-react';
+import Reveal from '@/components/Reveal';
+import { Cta, Eyebrow, PageHero, SectionTitle } from '@/components/Ui';
+export const metadata: Metadata={ title:'About' };
+export default function About(){return <><PageHero eyebrow="OUR POINT OF VIEW" title={<>Beauty with <em>intention.</em></>} description="A salon and spa identity built around elegance, expression, and the pleasure of taking time for yourself."/>
+  <section className="section-space"><div className="container-page split-editorial"><Reveal className="about-image-wrap"><Image src="/images/siba-studio.webp" alt="Original SIBA HAIR STUDIO Salon gold wall sign" width={1360} height={907} className="about-image"/><span>THE SIBA HAIR STUDIO IDENTITY</span></Reveal>
+  <Reveal delay={.1}><Eyebrow>A BEAUTIFULLY PERSONAL JOURNEY</Eyebrow><h2 className="display-title">Come as you are.<br/><em>Leave feeling you.</em></h2><p className="body-copy">SIBA HAIR STUDIO is designed to celebrate the individuality behind every style. Cream, antique gold, deep green and marble textures create a warm setting for thoughtful beauty.</p><p className="body-copy">We believe a salon visit should feel welcoming, considered and entirely your own. Share what you have in mind and explore our service collections.</p><Cta href="/services" outline>Explore the collection</Cta></Reveal></div></section>
+  <section className="section-space lighter-section"><div className="container-page"><Reveal><SectionTitle eyebrow="OUR PHILOSOPHY" title={<>A little luxury, <em>every day.</em></>} center/></Reveal><div className="value-cards"><Reveal><Award/><h3>Refined style</h3><p>A timeless aesthetic with room for every expression.</p></Reveal><Reveal delay={.1}><Heart/><h3>Thoughtful care</h3><p>A beauty experience that starts with your preferences.</p></Reveal><Reveal delay={.2}><Sparkles/><h3>Considered details</h3><p>The small moments that make time for yourself special.</p></Reveal></div></div></section>
+  <section className="section-space"><div className="container-page about-bottom"><Image src="/images/siba-logo-recreated.png" alt="Siba Hair Studio ornate gold crest and wordmark" width={250} height={250}/><div><Eyebrow>SIBA HAIR STUDIO HAIR & BEAUTY</Eyebrow><h2 className="display-title">The beauty of <em>beginning again.</em></h2><p className="body-copy">Ready for the next chapter of your style story?</p><Cta href="/booking">Request an appointment</Cta></div></div></section>
+</>}
