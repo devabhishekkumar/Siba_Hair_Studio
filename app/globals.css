@@ -30,6 +30,9 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
+main {
+  overflow-x: clip;
+}
 body::selection {
   background: var(--gold);
   color: #100d08;
@@ -1666,7 +1669,7 @@ img {
 .booking-layout,
 .contact-layout {
   display: grid;
-  grid-template-columns: 1.22fr 0.78fr;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
   gap: 48px;
   align-items: start;
 }
@@ -1678,7 +1681,7 @@ img {
 }
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 26px 19px;
 }
 .form-full {
@@ -1700,6 +1703,7 @@ img {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
+  min-width: 0;
   border: 1px solid #504331;
   color: var(--cream);
   background: #100f0c;
@@ -2294,7 +2298,7 @@ img {
   .booking-layout,
   .contact-layout,
   .service-detail-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 43px;
   }
   .welcome-visual {
@@ -2408,7 +2412,18 @@ img {
     display: none;
   }
   .header-inner {
-    gap: 10px;
+    gap: 8px;
+  }
+  .header-inner .brand-lockup {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .header-inner .brand-mark,
+  .menu-toggle {
+    flex-shrink: 0;
+  }
+  .header-inner .brand-words strong {
+    font-size: clamp(14px, 4.4vw, 20px);
   }
   .theme-toggle {
     min-width: 44px;
@@ -2418,7 +2433,12 @@ img {
     display: none;
   }
   .hero-main-copy h1 {
-    font-size: clamp(3.8rem, 13vw, 5.6rem);
+    font-size: clamp(2.5rem, 12vw, 4.25rem);
+  }
+  .page-hero .hero-title,
+  .service-detail-inner .hero-title,
+  .display-title {
+    overflow-wrap: anywhere;
   }
   .hero-actions {
     gap: 18px;
@@ -2449,7 +2469,7 @@ img {
     aspect-ratio: 1/1.1;
   }
   .form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .form-full {
     grid-column: auto;

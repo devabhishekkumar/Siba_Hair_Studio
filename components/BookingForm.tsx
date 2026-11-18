@@ -55,10 +55,7 @@ export default function BookingForm({
       return;
     }
     if (wa) {
-      window.open(wa, '_blank', 'noopener,noreferrer');
-      setResult(
-        'WhatsApp opened with your request. The salon must confirm your appointment.',
-      );
+      window.location.assign(wa);
       return;
     }
     try {

@@ -89,8 +89,6 @@ export default function Reviews() {
       <a
         href={feedbackHref || '/contact'}
         className="cta-button cta-outline"
-        target={feedbackHref ? '_blank' : undefined}
-        rel={feedbackHref ? 'noopener noreferrer' : undefined}
       >
         Share a review <ArrowUpRight size={17} strokeWidth={1.5} aria-hidden="true" />
       </a>
