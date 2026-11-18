@@ -4,9 +4,9 @@ export const site = {
   tagline: 'The art of being beautifully you.',
   phone: process.env.NEXT_PUBLIC_SALON_PHONE || '',
   email: process.env.NEXT_PUBLIC_SALON_EMAIL || '',
-  address: process.env.NEXT_PUBLIC_SALON_ADDRESS || '',
+  address: process.env.SIBA_ADDRESS || '',
   instagram: process.env.NEXT_PUBLIC_SALON_INSTAGRAM || '',
-  whatsapp: process.env.NEXT_PUBLIC_SALON_WHATSAPP || '',
+  whatsapp: process.env.SIBA_WHATSAPP || '919628020966',
   whatsappMessage:
     'Hello Siba Hair Studio, greetings from Lichi Industries LLP',
 };

@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { ArrowUpRight, Pause, Play } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import { SectionTitle } from '@/components/Ui';
-import { site } from '@/lib/site';
 import { whatsappLink } from '@/lib/utils';
 
 const sampleReviews = [
@@ -47,10 +46,10 @@ const reviewRows = [
   [...sampleReviews.slice(4), ...sampleReviews.slice(0, 4)],
 ];
 
-export default function Reviews() {
+export default function Reviews({ whatsappNumber }: { whatsappNumber: string }) {
   const [paused, setPaused] = useState(false);
   const feedbackHref = whatsappLink(
-    site.whatsapp,
+    whatsappNumber,
     'Hello Siba Hair Studio! I would like to share a review of my visit.\n\nService: \nMy experience: ',
   );
 

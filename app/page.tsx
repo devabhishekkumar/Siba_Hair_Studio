@@ -16,7 +16,7 @@ import Reviews from '@/components/Reviews';
 import VideoGallery from '@/components/VideoGallery';
 import GalleryGrid from '@/components/GalleryGrid';
 import { Cta, Eyebrow, SectionTitle } from '@/components/Ui';
-import { services } from '@/lib/site';
+import { services, site } from '@/lib/site';
 
 export default function HomePage() {
   return (
@@ -240,7 +240,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Reviews />
+      <Reviews whatsappNumber={site.whatsapp} />
 
       <section className="faq-section section-space">
         <div className="container-page faq-layout">

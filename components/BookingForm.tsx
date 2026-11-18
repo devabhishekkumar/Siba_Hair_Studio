@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowUpRight, Check, Copy } from 'lucide-react';
-import { services, site } from '@/lib/site';
+import { services } from '@/lib/site';
 import { whatsappLink } from '@/lib/utils';
 
 type Booking = {
@@ -31,8 +31,10 @@ function formatRequest(form: Booking) {
 }
 export default function BookingForm({
   initialService = '',
+  whatsappNumber,
 }: {
   initialService?: string;
+  whatsappNumber: string;
 }) {
   const [form, setForm] = useState<Booking>({
     ...initial,
@@ -47,7 +49,7 @@ export default function BookingForm({
     setCopied(false);
   };
   const text = formatRequest(form);
-  const wa = whatsappLink(site.whatsapp, text);
+  const wa = whatsappLink(whatsappNumber, text);
   const send = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (form.date < minDate) {

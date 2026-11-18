@@ -46,14 +46,14 @@ Copy `.env.example` to `.env.local`, then fill in:
 ```ini
 NEXT_PUBLIC_SALON_PHONE=+91...
 NEXT_PUBLIC_SALON_EMAIL=hello@example.com
-NEXT_PUBLIC_SALON_ADDRESS=Your correct salon address
+SIBA_ADDRESS=Your correct salon address
 NEXT_PUBLIC_SALON_INSTAGRAM=https://www.instagram.com/yourpage/
-NEXT_PUBLIC_SALON_WHATSAPP=91XXXXXXXXXX
+SIBA_WHATSAPP=91XXXXXXXXXX
 ```
 
 Environment values prefixed `NEXT_PUBLIC_` are **public** and must never contain secrets. Restart the dev server after changes. Never commit `.env.local`.
 
-Set `NEXT_PUBLIC_SALON_WHATSAPP` in your hosting environment before building the site. Use the studio’s WhatsApp number with its country code, then rebuild and redeploy after changing it.
+Set `SIBA_WHATSAPP` in your hosting environment before building the site. Use the studio’s WhatsApp number with its country code, then rebuild and redeploy after changing it.
 
 Update the salon name, services, and placeholder images in `lib/site.ts`. Brand assets are in `public/images`:
 - `studio-a1-sign.webp` — provided original circular sign image

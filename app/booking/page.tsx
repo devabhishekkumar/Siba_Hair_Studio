@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import BookingForm from '@/components/BookingForm';
 import { PageHero } from '@/components/Ui';
-import { services } from '@/lib/site';
+import { services, site } from '@/lib/site';
 export const metadata: Metadata = { title: 'Book an Appointment' };
 export default async function Booking({
   searchParams,
@@ -25,7 +25,7 @@ export default async function Booking({
       />
       <section className="section-space">
         <div className="container-page">
-          <BookingForm key={selectedService} initialService={selectedService} />
+          <BookingForm key={selectedService} initialService={selectedService} whatsappNumber={site.whatsapp} />
         </div>
       </section>
     </>
